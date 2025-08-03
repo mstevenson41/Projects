@@ -19,7 +19,7 @@ class SentimentPlotter:
         plt.legend(title="Sentiment")
         plt.tight_layout()
         os.makedirs("plots", exist_ok=True)
-        filename = f"{self.company}_{self.quarter}_{self.year}_by_speaker.png"
+        filename = f"plots/{self.company}_{self.quarter}_{self.year}_by_speaker.png"
         plt.savefig(filename)
         plt.close()
         print(f"Saved: {filename}")
@@ -30,7 +30,7 @@ class SentimentPlotter:
         plt.title("Sentiment Distribution (FinBERT)")
         plt.ylabel("Number of Responses")
         plt.xlabel("Sentiment")
-        filename = f"{self.company}_{self.quarter}_{self.year}_distribution.png"
+        filename = f"plots/{self.company}_{self.quarter}_{self.year}_distribution.png"
         plt.savefig(filename)
         plt.close()
         print(f"Saved: {filename}")
