@@ -38,7 +38,7 @@ def Earnings_Call_Scraper(url, company, quarter, year):
 
         transcript_text = "\n\n".join(transcript_lines)
 
-        with open(f"{company}_{quarter}_{year}_transcript.txt", "w", encoding="utf-8") as f:
+        with open(f"data/transcripts/{company}_{quarter}_{year}_transcript.txt", "w", encoding="utf-8") as f:
             f.write(transcript_text)
 
         print("Transcript saved successfully and ended at 'Duration'.")
